@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>428</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Widget -----------------------------------------*/
+QWidget {
+	background-color: #2b2b2b;
+    outline: 0px;
+}
+
+/* Tree -----------------------------------------*/
+
+QTreeView {
+	background-color: #333333;
+    outline: 0px;
+    border: 1px solid rgb(117, 118, 118);
+}
+
+QTreeView::item {
+    color:#d4d4d4;
+	/*background-color: #323232;*/
+	height:30px;
+
+}
+
+QTreeView::item:selected {
+    background-color: #5285a6;
+}
+
+QHeaderView::section {
+    font: 10pt &quot;Consolas&quot;;
+    height:25px;
+    color:#FFFFFF;
+    background:#5285a6;
+    border-left:0px solid gray;
+    border-right:1px solid gray;
+    border-top:0px solid gray;
+    border-bottom:0px solid gray;
+}
+/* LsitView -----------------------------------------*/
+QListView {
+	background-color: #333333;
+    outline: 0px;
+    border: 1px solid rgb(117, 118, 118);
+}
+
+/* Label -----------------------------------------*/
+QLabel {
+	color: #c8c8c8;
+	font: 11pt &quot;Consolas&quot;;
+}
+
+/* LineEdit -----------------------------------------*/
+QLineEdit {
+    color: #c8c8c8;
+    font: 11pt &quot;Consolas&quot;;
+    border-radius: 5px;
+    border: 1px solid rgb(117, 118, 118);
+    background-color: #36393f;
+
+}
+
+
+/* QPushButton -----------------------------------------*/
+QPushButton{
+	color: #c8c8c8;
+    font: 11pt &quot;Consolas&quot;;
+    border-radius: 5px;
+    border: 1px solid rgb(117, 118, 118);
+    background-color: #2d2d2d;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+QPushButton:hover { background-color: #262626; border-style: solid; border-radius: 5px; }
+QPushButton:pressed { background-color: #1a1a1a; border-style: solid; border-radius: 5px; }
+
+
+QMenuBar{
+    color: #ffffff;
+}
+
+QStatusBar{
+    color: #ffffff;
+}
+/* QListView -----------------------------------------*/
+QListView {
+    color: #c8c8c8;
+    font: 11pt &quot;Consolas&quot;;
+	/* 背景色 */
+	background-color:#2b2b2b;
+
+	/* 行与行之间交替颜色不同 */
+	/* setAlternatingRowColors(true); */
+	alternate-background-color:#404040;
+
+	/* 设置是否选中时,整行都高亮显示 */
+	show-decoration-selected:1;
+}
+
+/* 行与行之间交替颜色不同 */
+/* setAlternatingRowColors(true); */
+QListView::item:alternate {
+	background:#EEEEEE;
+}
+
+/* 当条目被选中时 */
+QListView::item:selected {
+	border:2px solid #6a6ea9;
+}
+
+/* 当条目被选中,并且不是有效的 */
+QListView::item::selected:!active {
+	background:qlineargradient(x1:0, y1:0,x2:1,y2:0, stop:0 #6a6ea9, stop:1 #888dd9);
+}
+
+/* 鼠标县浮在条目上 */
+QListView::item::hover {
+	background:qlineargradient(x1:0, y1:0,x2:1,y2:0, stop:0 #000000, stop:1 #FFFFFF);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,5">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Project Files</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Project File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Config File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>Projects</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
